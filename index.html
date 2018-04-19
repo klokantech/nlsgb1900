@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <script src="https://cdn.klokantech.com/osmnames/v1/autocomplete.js"></script>
+    <link href="https://cdn.klokantech.com/osmnames/v1/autocomplete.css" rel="stylesheet" />
+  </head>
+  <body>
+    <input autocomplete="off" id="search" type="text" />
+    <script>
+      var autocomplete = new kt.OsmNamesAutocomplete('search', 'https://nlsgb1900.klokantech.com/');
+      autocomplete.registerCallback(function(item) {
+        alert(JSON.stringify(item, ' ', 2));
+      });
+    </script>
+  </body>
+</html>
